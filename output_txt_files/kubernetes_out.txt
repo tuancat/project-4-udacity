@@ -1,1 +1,29 @@
 <paste log output from Kubernetes-mediated prediction, here>
+First run:
+deployment.apps/project-ml-microservice-kubernetes created
+NAME                                                  READY   STATUS              RESTARTS   AGE
+project-ml-microservice-kubernetes-78f48b7767-9h6d9   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+
+Run `kubectl get pods` to check whether the pod is running:
+apple@Apples-MacBook-Pro project-4-udacity % kubectl get pod
+NAME                                                  READY   STATUS    RESTARTS   AGE
+project-ml-microservice-kubernetes-6f57cc547b-wrtt9   1/1     Running   0          6m57s
+
+Run again after the pod status is Running:
+apple@Apples-MacBook-Pro project-4-udacity % ./run_kubernetes.sh 
+error: failed to create deployment: deployments.apps "project-ml-microservice-kubernetes" already exists
+NAME                                                  READY   STATUS    RESTARTS   AGE
+project-ml-microservice-kubernetes-6f57cc547b-wrtt9   1/1     Running   0          3m9s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+apple@Apples-MacBook-Pro project-4-udacity % ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
