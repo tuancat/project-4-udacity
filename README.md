@@ -1,5 +1,9 @@
 [![tuancnh][![CircleCI](https://dl.circleci.com/status-badge/img/gh/tuancat/project-4-udacity/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/tuancat/project-4-udacity/tree/main)
 
+## Git repoaitory 
+
+https://github.com/tuancat/project-4-udacity
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operational a Machine Learning Microservice API. 
